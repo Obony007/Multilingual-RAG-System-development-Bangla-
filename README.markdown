@@ -1,19 +1,19 @@
 # Multilingual Retrieval-Augmented Generation (RAG) System
 
-This project implements a Multilingual RAG system for processing Bengali and English queries on the "HSC26-Bangla1st-Paper.pdf" document, meeting the AI Engineer (Level-1) Technical Assessment requirements.
+This project implements a Multilingual RAG system for processing Bangla and English queries on the "HSC26-Bangla1st-Paper.pdf" document
 
 ## Setup Guide
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-username/rag-assessment.git
+   git clone https://github.com/username/rag-assessment.git
    cd rag-assessment
    ```
 
 2. **Create a Virtual Environment**:
    ```bash
    python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   source venv/bin/activate  
    ```
 
 3. **Install Dependencies**:
@@ -24,7 +24,7 @@ This project implements a Multilingual RAG system for processing Bengali and Eng
      - **Windows**: Download and install from [Tesseract](https://github.com/UB-Mannheim/tesseract/wiki). Add to PATH.
      - **macOS**: `brew install tesseract`
      - **Linux**: `sudo apt-get install tesseract-ocr tesseract-ocr-ben`
-   - Ensure Bengali language data for Tesseract is installed.
+   - Ensure Bangla language data for Tesseract is installed.
 
 4. **Place the PDF**:
    - Copy "HSC26-Bangla1st-Paper.pdf" to `data/`.
@@ -100,8 +100,8 @@ This project implements a Multilingual RAG system for processing Bengali and Eng
 
 1. **What method or library did you use to extract the text, and why? Did you face any formatting challenges with the PDF content?**
    - **Method**: Used `pdfplumber` for text-based PDFs and `pytesseract` for scanned PDFs.
-   - **Why**: `pdfplumber` handles text-based PDFs well, while `pytesseract` supports Bengali OCR for scanned documents.
-   - **Challenges**: The provided OCR output was corrupted (Hindi characters instead of Bengali). Used `pytesseract` with Bengali language support to extract correct text. Unicode normalization (`NFKC`) addressed encoding issues.
+   - **Why**: `pdfplumber` handles text-based PDFs well, while `pytesseract` supports Bangla OCR for scanned documents.
+   - **Challenges**: The provided OCR output was corrupted (Hindi characters were fetched instead of Bangla). Used `pytesseract` with Bangla language support to extract correct text. Unicode normalization (`NFKC`) addressed encoding issues.
 
 2. **What chunking strategy did you choose (e.g., paragraph-based, sentence-based, character limit)? Why do you think it works well for semantic retrieval?**
    - **Strategy**: Sentence-based chunking with a ~200-character limit.
@@ -109,7 +109,7 @@ This project implements a Multilingual RAG system for processing Bengali and Eng
 
 3. **What embedding model did you use? Why did you choose it? How does it capture the meaning of the text?**
    - **Model**: `paraphrase-multilingual-mpnet-base-v2`.
-   - **Why**: Supports Bengali and English, producing 768-dimensional embeddings.
+   - **Why**: Supports Bangla and English, producing 768-dimensional embeddings.
    - **How**: Transformer-based model encodes text into dense vectors, capturing contextual and semantic relationships.
 
 4. **How are you comparing the query with your stored chunks? Why did you choose this similarity method and storage setup?**
