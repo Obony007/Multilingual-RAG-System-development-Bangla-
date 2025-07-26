@@ -54,7 +54,7 @@ This project implements a Multilingual RAG system for processing Bangla and Engl
 
 ## Sample Queries and Outputs
 
-### Bengali Queries
+### Bangla Queries
 1. **Query**: অনুপমের ভাষায় সুপুরুষ কাকে কে বলা হয়েছে?
    - **Output**: শুম্ভুনাথ
 2. **Query**: কাকে কে অনুপমের ভাগ্য দেবতা বলে উল্লেখ করা হয়েছে?
